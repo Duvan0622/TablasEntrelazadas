@@ -44,7 +44,7 @@ public class ClienteController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    @DeleteMapping("/")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Cliente> borrar(@PathVariable Long id){
         Cliente obj = clienteService.buscarClienteId(id);
         if(obj != null){
